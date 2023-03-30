@@ -7,6 +7,10 @@ Bem vindo, ao projeto Alura Stickers.
 - Foi feita uma conexão com a api do Imdb e buscou as inforções dos prmeiros 250 filmes;
 - Foram extraidos os dados interessantes ao projeto;
 - Os dados foram exibidos via terminal;
+### Resultado do desafio
+![image](https://user-images.githubusercontent.com/28654922/228936855-260378b3-a1d5-4ac2-be17-869ab7295e7d.png)
+
+### Aula 02
 
 ## Folder Structure
 
