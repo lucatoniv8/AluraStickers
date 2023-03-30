@@ -12,7 +12,7 @@ public class App {
 
         // menu aplicação
         System.out.println("Escolha qual Rank você deseja:");
-        System.out.println("|1 - Filmes|-|2 - Series|-|0 - Sair|");
+        System.out.println("1 - Filmes;\n2 - Series;\n0 - Sair");
         Scanner ler = new Scanner(System.in);
         int opcao = ler.nextInt();
         String url = "";
