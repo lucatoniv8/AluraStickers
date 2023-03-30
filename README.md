@@ -1,6 +1,12 @@
-## Getting Started
+## imersão Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Bem vindo, ao projeto Alura Stickers.
+
+### Aula 01
+
+- Foi feita uma conexão com a api do Imdb e buscou as inforções dos prmeiros 250 filmes;
+- Foram extraidos os dados interessantes ao projeto;
+- Os dados foram exibidos via terminal;
 
 ## Folder Structure
 
