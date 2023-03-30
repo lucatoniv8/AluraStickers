@@ -9,7 +9,7 @@ import javax.imageio.ImageIO;
 
 public class GeradoraDeFigurinhas {
     
-    public void cria( InputStream inputStream, String nomeArquivo ) throws Exception{
+    public void cria( InputStream inputStream, String nomeArquivo, String rotulo ) throws Exception{
 
         // leitura da imagem
         // InputStream inputStream = new FileInputStream(new File("entrada/filme.jpg"));
@@ -26,12 +26,12 @@ public class GeradoraDeFigurinhas {
         graphics.drawImage(imagemOriginal, 0, 0, null);
         
         // configurar a fonte
-        var fonte = new Font(Font.SANS_SERIF, Font.BOLD, 200);
+        var fonte = new Font(Font.SANS_SERIF, Font.BOLD, 100);
         graphics.setColor(Color.ORANGE);
         graphics.setFont(fonte);
         
         //escrever um texto na imagem
-        graphics.drawString("O Loco Bixo!", 100, novaAltura - 25);
+        graphics.drawString(rotulo, 75, novaAltura - 50);
 
 
         //escrever a nova imagem em um arquivo

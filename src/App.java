@@ -1,4 +1,7 @@
+import java.io.File;
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -41,11 +44,15 @@ public class App {
         var parser = new JsonParser();
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
         
+        var diretorio = new File("figurinhas/");
+        diretorio.mkdir();
+
+        var geradora = new GeradoraDeFigurinhas();
         System.out.println("\n====================================================");
         // exibir e manipular os dados
          for (Map<String,String> filme : listaDeFilmes) {
             System.out.println("\u001b[1mTITULO:\u001b[m" + filme.get("title"));
-            System.out.println("\u001b[1mURL IMAGEM:\u001b[m" + filme.get("image"));
+            // System.out.println("\u001b[1mURL IMAGEM:\u001b[m" + filme.get("image"));
             double estrelas = Double.parseDouble(filme.get("imDbRating"));
             for (int i = 1; i <= estrelas; i++) {
                 System.out.print(" ⭐");
@@ -55,15 +62,23 @@ public class App {
             if (estrelas > 9){
                 rotulo = "OBRA PRIMA";
             }else if(estrelas > 7){
-                rotulo = "MUITO BOM HEIN";
+                rotulo = "MUITO BOM ";
             }else if(estrelas > 5){
-                rotulo = "DÁ PRO GASTO";
+                rotulo = "TÁ FRACO";
             }else{
                 rotulo = "RUIM DEMAIS";
             }
             System.out.println(rotulo);
             System.out.println("\n====================================================");
             
+            String urlImagem = filme.get("image");
+            String titulo = filme.get("title");
+
+            InputStream inputStream = new URL(urlImagem).openStream();
+            String nomeArquivo = "figurinhas/" + titulo + ".png";
+            
+            geradora.cria(inputStream, nomeArquivo, rotulo);
+
         }
     }
 }
