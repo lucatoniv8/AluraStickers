@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.URI;
 import java.net.URL;
@@ -30,10 +31,10 @@ public class App {
                 System.out.println("Saindo ..........");
                 break;
             default:
+            System.out.println("Não entendi fechando aplicação");
                 break;
         }
         // fazer um conexão HTTP e buscar os top 250 filmes
-        //String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/TopMovies.json";
         URI endereco = URI.create(url);
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder(endereco).GET().build();
@@ -49,10 +50,10 @@ public class App {
 
         var geradora = new GeradoraDeFigurinhas();
         System.out.println("\n====================================================");
+        
         // exibir e manipular os dados
-         for (Map<String,String> filme : listaDeFilmes) {
+        for (Map<String,String> filme : listaDeFilmes) {
             System.out.println("\u001b[1mTITULO:\u001b[m" + filme.get("title"));
-            // System.out.println("\u001b[1mURL IMAGEM:\u001b[m" + filme.get("image"));
             double estrelas = Double.parseDouble(filme.get("imDbRating"));
             for (int i = 1; i <= estrelas; i++) {
                 System.out.print(" ⭐");
@@ -75,9 +76,10 @@ public class App {
             String titulo = filme.get("title");
 
             InputStream inputStream = new URL(urlImagem).openStream();
+            InputStream joinha = new FileInputStream(new File("figurinhas/joinha.png"));
             String nomeArquivo = "figurinhas/" + titulo + ".png";
             
-            geradora.cria(inputStream, nomeArquivo, rotulo);
+            geradora.cria(inputStream, joinha, nomeArquivo, rotulo);
 
         }
     }
