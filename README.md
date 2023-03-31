@@ -12,6 +12,17 @@ Bem vindo, ao projeto Alura Stickers.
 
 ### Aula 02
 
+- Foi feito a impotação das imagens dos posters;
+- Criado uma nova imagem com altura maior;
+- Colocado uma legenda para o poster virar uma figurinha do whatsApp;
+- Personalizado o estilo da legenda;
+- Criando uma nova imagem em um arquivo;
+### Resultado do desafio
+
+![Breaking Bad](https://user-images.githubusercontent.com/28654922/228994680-be91b195-9c28-42c1-a6c6-3b2a18c995b3.png) 
+![Planet Earth](https://user-images.githubusercontent.com/28654922/228994693-aec8f445-a037-4e37-8734-921bb0e0c658.png)
+
+
 ## Folder Structure
 
 The workspace contains two folders by default, where:
