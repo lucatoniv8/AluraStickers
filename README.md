@@ -18,9 +18,9 @@ Bem vindo, ao projeto Alura Stickers.
 - Personalizado o estilo da legenda;
 - Criando uma nova imagem em um arquivo;
 ### Resultado do desafio
+![Breaking Bad](https://user-images.githubusercontent.com/28654922/228994966-b4ed1484-535a-4203-b52c-a45a6d06e60f.png)
 
-![Breaking Bad](https://user-images.githubusercontent.com/28654922/228994680-be91b195-9c28-42c1-a6c6-3b2a18c995b3.png) 
-![Planet Earth](https://user-images.githubusercontent.com/28654922/228994693-aec8f445-a037-4e37-8734-921bb0e0c658.png)
+
 
 
 ## Folder Structure
